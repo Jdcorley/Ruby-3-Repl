@@ -1,0 +1,25 @@
+run = ["ruby", "root/test/main.rb"] 
+
+# The default file opened in the editor.
+entrypoint = "root/test/main.rb"
+
+[nix]
+channel = "stable-22_11"
+
+[packager]
+language = "ruby"
+
+[packager.features]
+  # Enables the package search sidebar
+  packageSearch = true
+  # Enabled package guessing
+  guessImports = false
+
+# Per language configuration: language.<lang name> 
+[languages.ruby]
+# The glob pattern to match files for this programming language
+pattern = "**/*.rb"
+
+    # LSP configuration for code intelligence
+    [languages.ruby.languageServer]
+    start = ["ruby-analyzer"]
