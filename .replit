@@ -1,4 +1,4 @@
-run = ["ruby", "root/test/main.rb"] 
+run = ["ruby", "root/test/tc_main.rb"] 
 
 # The default file opened in the editor.
 entrypoint = "root/test/main.rb"
